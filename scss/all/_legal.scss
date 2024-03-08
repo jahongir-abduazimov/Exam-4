@@ -1,0 +1,62 @@
+#legal {
+    padding-bottom: 360px;
+    h1 {
+        color: $text-color;
+    }
+    p {
+        color: $text-color;
+    }
+    .legal-top {
+        margin-bottom: 80px;
+        p {
+            line-height: 25px;
+        }
+    }
+    .legal-bottom {
+        >p {
+            margin-bottom: 30px;
+        }
+        &-cards {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            &-card {
+                width: 270px;
+                height: 180px;
+                border-radius: 20px;
+                border: 1px solid $borders-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 20px;
+                transition: all 0.3s ease;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    .legal-bottom-cards-card-tel {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+                a {
+                    color: $main-bg-color;
+                    font-weight: 600;
+                }
+                &:hover {
+                    background-color: $main-bg-color;
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                    p {
+                        color: #fff;
+                    }
+                    a {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

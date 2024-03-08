@@ -1,0 +1,22 @@
+#seo {
+  padding-bottom: 80px;
+  h1 {
+    color: $text-color;
+  }
+  p {
+    color: $text-color;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  button {
+    width: 100%;
+    padding: 16px 0;
+    color: $main-bg-color;
+    font-weight: 600;
+    background-color: #E0ECE9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,100 @@
+#selection {
+  padding: 29px 0 80px 0;
+  .selection__wrapper {
+    display: flex;
+    &-left {
+        width: 560px;
+      h1 {
+        color: $text-color;
+      }
+      >p {
+        color: $text-color;
+        margin-bottom: 30px;
+        line-height: 25px;
+      }
+      &-rate {
+        display: flex;
+        gap: 48px;
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            color: $main-bg-color;
+            margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .selection__bottom {
+    background-color: $main-bg-color;
+    padding: 0 60px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    &-left {
+        p{
+            &:nth-child(1) {
+                color: #fff;
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            &:nth-child(2) {
+                color: #fff;
+                font-size: 42px;
+                font-weight: 700;
+            }
+        }
+    }
+    &-right {
+        >p {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        form {
+            display: flex;
+            margin-bottom: 22px;
+            gap: 15px;
+            label {
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                padding: 7px 16px;
+                border-radius: 10px;
+                span {
+                    font-size: 12px;
+                    color: rgba(47, 43, 67, 0.527);
+                }
+                input {
+                    border: none;
+                    outline: none;
+                }
+            }
+            button {
+                background-color: transparent;
+                padding: 16px 36px 18px 36px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                    background-color: #81D2BC;
+                    border-color: transparent;
+                }
+                &:active {
+                    background-color: transparent;
+                    border-color: #fff;
+                }
+            }
+        }
+        >span{
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.50);
+            font-weight: 600;
+        }
+    }
+  }
+}

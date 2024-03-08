@@ -1,0 +1,36 @@
+#help {
+  padding-bottom: 80px;
+  h1 {
+    color: $text-color;
+    margin-bottom: 30px;
+  }
+  .help-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+    &-card {
+      display: flex;
+      width: 550px;
+      height: 180px;
+      padding: 30px;
+      align-items: center;
+      border-radius: 20px;
+      border: 1px solid $borders-color;
+      gap: 20px;
+      &-icon {
+        width: 110px;
+        height: 110px;
+        background: #EBF2F0;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      p {
+        width: 350px;
+        color: $text-color;
+        line-height: 24px;
+      }
+    }
+  }
+}

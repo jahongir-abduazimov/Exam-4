@@ -1,0 +1,27 @@
+footer{
+    padding-bottom: 80px;
+    h1 {
+        margin-bottom: 40px;
+        color: $text-color;
+    }
+    h2 {
+        color: $text-color;
+        margin-bottom: 15px;
+    }
+    p {
+        color: $text-color;
+    }
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 40px;
+        .footer__wrapper-card {
+            width: 270px;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}
