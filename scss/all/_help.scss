@@ -4,6 +4,63 @@
     color: $text-color;
     margin-bottom: 30px;
   }
+  .lawyers-call {
+    background-color: $main-bg-color;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    height: 291px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    &-images {
+      img {
+        &:nth-child(1) {
+          z-index: 10;
+          bottom: 0;
+          position: absolute;
+          left: -30px;
+        }
+        &:nth-child(2) {
+          position: absolute;
+          left: -40px;
+          bottom: 0;
+          z-index: 0;
+        }
+      }
+    }
+    &-tel {
+      margin-bottom: 37px;
+      p {
+        &:nth-child(1) {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        &:nth-child(2) {
+          color: #fff;
+          font-size: 36px;
+          font-weight: 700;
+          letter-spacing: -1.26px;
+        }
+      }
+    }
+    &-lawyers {
+      padding-left: 140px;
+      p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 188px;
+      }
+    }
+  }
   .help-cards {
     display: grid;
     grid-template-columns: auto auto;
@@ -30,6 +87,44 @@
         width: 350px;
         color: $text-color;
         line-height: 24px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:576px) {
+  #help {
+    padding-bottom: 0;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    .lawyers-call {
+      display: flex;
+    }
+    .help-cards {
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: 20px;
+      &-card {
+        display: block;
+        width: 100%;
+        height: 193px;
+        padding: 20px;
+        gap: 20px;
+        &-icon {
+          width: 54px;
+          height: 54px;
+          img {
+            width: 24px;
+          }
+        }
+        p {
+          width: 100%;
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
     }
   }

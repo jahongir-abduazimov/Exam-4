@@ -6,24 +6,24 @@
     position: relative;
     gap: 19px;
     .comment-prew {
-        position: absolute;
-        top: 190px;
-        left: -70px;
-        border: none;
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        cursor: pointer;
+      position: absolute;
+      top: 190px;
+      left: -70px;
+      border: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
     }
     .comment-next {
-        position: absolute;
-        top: 190px;
-        right: -70px;
-        border: none;
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        cursor: pointer;
+      position: absolute;
+      top: 190px;
+      right: -70px;
+      border: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
     }
     &-card {
       min-width: 367px;
@@ -77,6 +77,30 @@
           line-height: 150%;
           margin-top: 12px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #comment {
+    padding-bottom: 40px;
+    .comment__wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      gap: 19px;
+      overflow-x: scroll;
+      .comment-prew {
+        display: none;
+      }
+      .comment-next {
+        display: none;
+      }
+      &-card {
+        min-width: 320px;
+        height: 366px;
+        padding: 20px;
       }
     }
   }

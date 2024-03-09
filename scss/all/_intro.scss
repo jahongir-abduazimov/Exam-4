@@ -68,3 +68,44 @@
     }
   }
 }
+
+@media screen and (max-width:576px) {
+  #intro {
+    padding-top: 0;
+    padding-bottom: 50px;
+    .intro__wrapper {
+      flex-direction: column-reverse;
+      &__left {
+        width: 100%;
+        h1 {
+          font-size: 22px;
+          width: 360px;
+          text-align: center;
+        }
+        > p {
+          text-align: center;
+        }
+        &-button {
+          flex-direction: column;
+          form {
+            width: 100%;
+            button {
+              width: 100%;
+            }
+          }
+        }
+        &-links {
+          display: grid;
+          grid-template-columns: auto auto;
+          row-gap: 20px;
+        }
+      }
+      &__right {
+        img {
+          width: 235px;
+        }
+      }
+    }
+  }
+  
+}

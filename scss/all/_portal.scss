@@ -85,7 +85,7 @@
       }
       &-form {
         textarea {
-          width: 577px;
+          width: 100%;
           height: 213px;
           padding: 16px;
           outline: none;
@@ -146,6 +146,98 @@
           }
           span {
             color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #portal {
+    padding-bottom: 40px;
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .portal__wrapper {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+        &-card {
+          width: 100%;
+          height: 106px;
+          gap: 20px;
+          img {
+            width: 50px;
+          }
+
+          div {
+            span {
+              &:nth-child(1) {
+                font-size: 14px;
+              }
+              &:nth-child(2) {
+                font-size: 12px;
+              }
+              &:nth-child(3) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+      &-right {
+        width: 100%;
+        padding: 20px;
+        height: 628px;
+        &-title {
+          position: static;
+          width: 110px;
+        }
+        &-top {
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        &-form {
+          textarea {
+            width: 100%;
+            height: 180px;
+          }
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            label {
+              width: 100%;
+            }
+          }
+        }
+        &-bottom {
+          display: flex;
+          gap: 40px;
+          > div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            p {
+              font-size: 16px;
+            }
+            span {
+              font-size: 12px;
+            }
           }
         }
       }

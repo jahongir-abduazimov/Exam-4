@@ -1,62 +1,105 @@
 #legal {
-    padding-bottom: 360px;
-    h1 {
-        color: $text-color;
-    }
+  padding-bottom: 360px;
+  h1 {
+    color: $text-color;
+  }
+  p {
+    color: $text-color;
+  }
+  .legal-top {
+    margin-bottom: 80px;
     p {
-        color: $text-color;
+      line-height: 25px;
+    }
+  }
+  .legal-bottom {
+    > p {
+      margin-bottom: 30px;
+    }
+    &-cards {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      &-card {
+        width: 270px;
+        height: 180px;
+        border-radius: 20px;
+        border: 1px solid $borders-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        transition: all 0.3s ease;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .legal-bottom-cards-card-tel {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+        a {
+          color: $main-bg-color;
+          font-weight: 600;
+        }
+        &:hover {
+          background-color: $main-bg-color;
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+          p {
+            color: #fff;
+          }
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #legal {
+    padding-bottom: 50px;
+    h1 {
+      font-size: 20px;
     }
     .legal-top {
-        margin-bottom: 80px;
-        p {
-            line-height: 25px;
-        }
+      margin-bottom: 40px;
+      p {
+        line-height: 22px;
+      }
     }
     .legal-bottom {
-        >p {
-            margin-bottom: 30px;
-        }
-        &-cards {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            &-card {
-                width: 270px;
-                height: 180px;
-                border-radius: 20px;
-                border: 1px solid $borders-color;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 20px;
-                transition: all 0.3s ease;
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    .legal-bottom-cards-card-tel {
-                        font-size: 20px;
-                        font-weight: 700;
-                    }
-                }
-                a {
-                    color: $main-bg-color;
-                    font-weight: 600;
-                }
-                &:hover {
-                    background-color: $main-bg-color;
-                    svg {
-                        path {
-                            fill: #fff;
-                        }
-                    }
-                    p {
-                        color: #fff;
-                    }
-                    a {
-                        color: #ffffff;
-                    }
-                }
+      > p {
+        margin-bottom: 20px;
+      }
+      &-cards {
+        grid-template-columns: auto auto;
+        gap: 10px;
+        &-card {
+          width: 175px;
+          height: 191px;
+          padding: 15px;
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            p {
+                font-size: 14px;
             }
+            .legal-bottom-cards-card-tel {
+              font-size: 16px;
+            }
+          }
+          a {
+            font-variation-settings: 14px;
+          }
         }
+      }
     }
+  }
 }

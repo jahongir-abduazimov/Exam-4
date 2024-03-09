@@ -156,3 +156,91 @@
     }
   }
 }
+
+@media screen and (max-width:576px) {
+  #lawyers {
+    padding-bottom: 40px;
+    position: relative;
+    h1 {
+      font-size: 20px;
+    }
+    .lawyers-cards {
+      display: flex;
+      column-gap: 20px;
+      margin-bottom: 20px;
+      overflow-x: scroll;
+      &-card {
+        min-width: 319px;
+        height: 344px;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid $borders-color;
+        div {
+          display: flex;
+          align-items: start;
+          gap: 15px;
+          p {
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+        p {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+    .lawyers-call {
+      display: none;
+      
+      &-tel {
+        p {
+          &:nth-child(1) {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+          &:nth-child(2) {
+            color: #fff;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1.26px;
+          }
+        }
+      }
+      &-lawyers {
+        p {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        div {
+          display: flex;
+          column-gap: -29px;
+        }
+      }
+    }
+    .lawyers-question {
+      position: static;
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column;
+      align-items: start;
+      height: 457px;
+      h1 {
+        font-size: 24px;
+      }
+      &-form {
+        form {
+          flex-direction: column;
+          label {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+}

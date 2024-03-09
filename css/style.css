@@ -356,6 +356,12 @@ header .header-nav {
   align-items: center;
   margin-bottom: 30px;
 }
+header .header-nav .menu-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 header .header-nav__input {
   position: relative;
 }
@@ -410,6 +416,11 @@ header .header-nav__tel span {
   color: rgba(47, 43, 67, 0.5019607843);
   font-size: 14px;
 }
+header .header-nav .search-user {
+  display: none;
+  align-items: center;
+  gap: 15px;
+}
 header .header-bottom {
   display: flex;
   align-items: center;
@@ -457,6 +468,33 @@ header .header-bottom .header-bottom__login p:hover {
   color: #33836E;
 }
 
+@media screen and (max-width: 576px) {
+  header .header-nav {
+    margin-top: 0px;
+    height: 72px;
+  }
+  header .header-nav .menu-btn {
+    display: block;
+  }
+  header .header-nav-logo {
+    transform: scale(0.8);
+  }
+  header .header-nav__input {
+    display: none;
+  }
+  header .header-nav__button {
+    display: none;
+  }
+  header .header-nav__tel {
+    display: none;
+  }
+  header .header-nav .search-user {
+    display: flex;
+  }
+  header .header-bottom {
+    display: none;
+  }
+}
 #intro {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -528,6 +566,43 @@ header .header-bottom .header-bottom__login p:hover {
   color: #140A32;
 }
 
+@media screen and (max-width: 576px) {
+  #intro {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  #intro .intro__wrapper {
+    flex-direction: column-reverse;
+  }
+  #intro .intro__wrapper__left {
+    width: 100%;
+  }
+  #intro .intro__wrapper__left h1 {
+    font-size: 22px;
+    width: 360px;
+    text-align: center;
+  }
+  #intro .intro__wrapper__left > p {
+    text-align: center;
+  }
+  #intro .intro__wrapper__left-button {
+    flex-direction: column;
+  }
+  #intro .intro__wrapper__left-button form {
+    width: 100%;
+  }
+  #intro .intro__wrapper__left-button form button {
+    width: 100%;
+  }
+  #intro .intro__wrapper__left-links {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+  }
+  #intro .intro__wrapper__right img {
+    width: 235px;
+  }
+}
 #legal {
   padding-bottom: 360px;
 }
@@ -587,12 +662,103 @@ header .header-bottom .header-bottom__login p:hover {
   color: #ffffff;
 }
 
+@media screen and (max-width: 576px) {
+  #legal {
+    padding-bottom: 50px;
+  }
+  #legal h1 {
+    font-size: 20px;
+  }
+  #legal .legal-top {
+    margin-bottom: 40px;
+  }
+  #legal .legal-top p {
+    line-height: 22px;
+  }
+  #legal .legal-bottom > p {
+    margin-bottom: 20px;
+  }
+  #legal .legal-bottom-cards {
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  #legal .legal-bottom-cards-card {
+    width: 175px;
+    height: 191px;
+    padding: 15px;
+  }
+  #legal .legal-bottom-cards-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #legal .legal-bottom-cards-card div p {
+    font-size: 14px;
+  }
+  #legal .legal-bottom-cards-card div .legal-bottom-cards-card-tel {
+    font-size: 16px;
+  }
+  #legal .legal-bottom-cards-card a {
+    font-variation-settings: 14px;
+  }
+}
 #help {
   padding-bottom: 80px;
 }
 #help h1 {
   color: #140A32;
   margin-bottom: 30px;
+}
+#help .lawyers-call {
+  background-color: #33836E;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  height: 291px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+#help .lawyers-call-images img:nth-child(1) {
+  z-index: 10;
+  bottom: 0;
+  position: absolute;
+  left: -30px;
+}
+#help .lawyers-call-images img:nth-child(2) {
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+  z-index: 0;
+}
+#help .lawyers-call-tel {
+  margin-bottom: 37px;
+}
+#help .lawyers-call-tel p:nth-child(1) {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#help .lawyers-call-tel p:nth-child(2) {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.26px;
+}
+#help .lawyers-call-lawyers {
+  padding-left: 140px;
+}
+#help .lawyers-call-lawyers p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#help .lawyers-call-lawyers img {
+  width: 188px;
 }
 #help .help-cards {
   display: grid;
@@ -624,6 +790,42 @@ header .header-bottom .header-bottom__login p:hover {
   line-height: 24px;
 }
 
+@media screen and (max-width: 576px) {
+  #help {
+    padding-bottom: 0;
+  }
+  #help h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  #help .lawyers-call {
+    display: flex;
+  }
+  #help .help-cards {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+  #help .help-cards-card {
+    display: block;
+    width: 100%;
+    height: 193px;
+    padding: 20px;
+    gap: 20px;
+  }
+  #help .help-cards-card-icon {
+    width: 54px;
+    height: 54px;
+  }
+  #help .help-cards-card-icon img {
+    width: 24px;
+  }
+  #help .help-cards-card p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
 #selection {
   padding: 29px 0 80px 0;
 }
@@ -719,6 +921,66 @@ header .header-bottom .header-bottom__login p:hover {
   font-weight: 600;
 }
 
+@media screen and (max-width: 576px) {
+  #selection {
+    padding: 29px 0 40px 0;
+  }
+  #selection .selection__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #selection .selection__wrapper-left {
+    width: 100%;
+  }
+  #selection .selection__wrapper-left h1 {
+    font-size: 20px;
+  }
+  #selection .selection__wrapper-left > p {
+    margin-bottom: 25px;
+    line-height: 21px;
+    font-size: 14px;
+  }
+  #selection .selection__wrapper-left-rate {
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  #selection .selection__wrapper-left-rate p {
+    font-size: 20px;
+  }
+  #selection .selection__wrapper-left-rate span {
+    font-size: 12px;
+  }
+  #selection .selection__wrapper-right img {
+    width: 360px;
+    position: relative;
+    top: 3px;
+  }
+  #selection .selection__bottom {
+    padding: 20px;
+    height: 336px;
+    flex-direction: column;
+  }
+  #selection .selection__bottom-left p:nth-child(1) {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  #selection .selection__bottom-left p:nth-child(2) {
+    color: #fff;
+    font-size: 36px;
+  }
+  #selection .selection__bottom-right > p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  #selection .selection__bottom-right form {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #lawyers {
   padding-bottom: 141px;
   position: relative;
@@ -866,6 +1128,83 @@ header .header-bottom .header-bottom__login p:hover {
   font-weight: 400;
 }
 
+@media screen and (max-width: 576px) {
+  #lawyers {
+    padding-bottom: 40px;
+    position: relative;
+  }
+  #lawyers h1 {
+    font-size: 20px;
+  }
+  #lawyers .lawyers-cards {
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+  #lawyers .lawyers-cards-card {
+    min-width: 319px;
+    height: 344px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(47, 43, 67, 0.1490196078);
+  }
+  #lawyers .lawyers-cards-card div {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+  }
+  #lawyers .lawyers-cards-card div p {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #lawyers .lawyers-cards-card p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #lawyers .lawyers-call {
+    display: none;
+  }
+  #lawyers .lawyers-call-tel p:nth-child(1) {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  #lawyers .lawyers-call-tel p:nth-child(2) {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1.26px;
+  }
+  #lawyers .lawyers-call-lawyers p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  #lawyers .lawyers-call-lawyers div {
+    display: flex;
+    column-gap: -29px;
+  }
+  #lawyers .lawyers-question {
+    position: static;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: start;
+    height: 457px;
+  }
+  #lawyers .lawyers-question h1 {
+    font-size: 24px;
+  }
+  #lawyers .lawyers-question-form form {
+    flex-direction: column;
+  }
+  #lawyers .lawyers-question-form form label {
+    width: 100%;
+  }
+}
 #seo {
   padding-bottom: 80px;
 }
@@ -889,6 +1228,19 @@ header .header-bottom .header-bottom__login p:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 576px) {
+  #seo {
+    padding-bottom: 40px;
+  }
+  #seo h1 {
+    font-size: 20px;
+  }
+  #seo p {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+}
 #comment {
   padding-bottom: 80px;
 }
@@ -967,6 +1319,29 @@ header .header-bottom .header-bottom__login p:hover {
   margin-top: 12px;
 }
 
+@media screen and (max-width: 576px) {
+  #comment {
+    padding-bottom: 40px;
+  }
+  #comment .comment__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 19px;
+    overflow-x: scroll;
+  }
+  #comment .comment__wrapper .comment-prew {
+    display: none;
+  }
+  #comment .comment__wrapper .comment-next {
+    display: none;
+  }
+  #comment .comment__wrapper-card {
+    min-width: 320px;
+    height: 366px;
+    padding: 20px;
+  }
+}
 #portal {
   padding-bottom: 80px;
 }
@@ -1051,7 +1426,7 @@ header .header-bottom .header-bottom__login p:hover {
   font-size: 18px;
 }
 #portal .portal__wrapper-right-form textarea {
-  width: 577px;
+  width: 100%;
   height: 213px;
   padding: 16px;
   outline: none;
@@ -1115,6 +1490,88 @@ header .header-bottom .header-bottom__login p:hover {
   color: #fff;
 }
 
+@media screen and (max-width: 576px) {
+  #portal {
+    padding-bottom: 40px;
+  }
+  #portal h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  #portal .portal__wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #portal .portal__wrapper-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  #portal .portal__wrapper-left-card {
+    width: 100%;
+    height: 106px;
+    gap: 20px;
+  }
+  #portal .portal__wrapper-left-card img {
+    width: 50px;
+  }
+  #portal .portal__wrapper-left-card div span:nth-child(1) {
+    font-size: 14px;
+  }
+  #portal .portal__wrapper-left-card div span:nth-child(2) {
+    font-size: 12px;
+  }
+  #portal .portal__wrapper-left-card div span:nth-child(3) {
+    font-size: 12px;
+  }
+  #portal .portal__wrapper-right {
+    width: 100%;
+    padding: 20px;
+    height: 628px;
+  }
+  #portal .portal__wrapper-right-title {
+    position: static;
+    width: 110px;
+  }
+  #portal .portal__wrapper-right-top h1 {
+    font-size: 20px;
+  }
+  #portal .portal__wrapper-right-top p {
+    font-size: 12px;
+  }
+  #portal .portal__wrapper-right-form textarea {
+    width: 100%;
+    height: 180px;
+  }
+  #portal .portal__wrapper-right-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  #portal .portal__wrapper-right-form form label {
+    width: 100%;
+  }
+  #portal .portal__wrapper-right-bottom {
+    display: flex;
+    gap: 40px;
+  }
+  #portal .portal__wrapper-right-bottom > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #portal .portal__wrapper-right-bottom > div p {
+    font-size: 16px;
+  }
+  #portal .portal__wrapper-right-bottom > div span {
+    font-size: 12px;
+  }
+}
 footer {
   padding-bottom: 80px;
 }
@@ -1132,6 +1589,7 @@ footer p {
 footer .footer__wrapper {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
   row-gap: 40px;
 }
 footer .footer__wrapper .footer__wrapper-card {
@@ -1141,4 +1599,29 @@ footer .footer__wrapper .footer__wrapper-card div {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    padding-bottom: 40px;
+  }
+  footer h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  footer h2 {
+    font-size: 18px;
+  }
+  footer p {
+    color: #140A32;
+    font-size: 12px;
+  }
+  footer .footer__wrapper {
+    grid-template-columns: auto auto;
+    justify-content: start;
+    row-gap: 30px;
+  }
+  footer .footer__wrapper .footer__wrapper-card {
+    width: 175px;
+  }
 }/*# sourceMappingURL=style.css.map */
