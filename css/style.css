@@ -322,6 +322,10 @@ body {
   font-family: "Open sans";
 }
 
+.overflowHidden {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Open sans";
   src: url(../assets/fonts/OpenSans-Regular.ttf);
@@ -349,6 +353,9 @@ body {
   padding: 0 15px;
 }
 
+header {
+  height: 166px;
+}
 header .header-nav {
   margin-top: 40px;
   display: flex;
@@ -469,6 +476,9 @@ header .header-bottom .header-bottom__login p:hover {
 }
 
 @media screen and (max-width: 576px) {
+  header {
+    height: 80px;
+  }
   header .header-nav {
     margin-top: 0px;
     height: 72px;
@@ -494,7 +504,59 @@ header .header-bottom .header-bottom__login p:hover {
   header .header-bottom {
     display: none;
   }
+  .toggle-menu {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    padding: 20px;
+    top: 60px;
+    transition: all 0.3s ease;
+  }
+  .toggle-menu .toggle-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .toggle-menu .toggle-menu-wrapper .toggle-login {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .toggle-menu .toggle-menu-wrapper-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .toggle-menu .toggle-menu-wrapper-btns button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background-color: none;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgba(47, 43, 67, 0.1490196078);
+  }
+  .toggle-menu .toggle-menu-wrapper > button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+    font-weight: 600;
+    border: none;
+    background-color: #33836E;
+    border-radius: 10px;
+    color: #fff;
+  }
 }
+.translate {
+  transition: all 0.2s ease;
+  transform: translate(-100%);
+}
+
 #intro {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -1249,6 +1311,7 @@ header .header-bottom .header-bottom__login p:hover {
   justify-content: space-between;
   position: relative;
   gap: 19px;
+  overflow-x: scroll;
 }
 #comment .comment__wrapper .comment-prew {
   position: absolute;
@@ -1570,6 +1633,200 @@ header .header-bottom .header-bottom__login p:hover {
   }
   #portal .portal__wrapper-right-bottom > div span {
     font-size: 12px;
+  }
+}
+#popup {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+#popup .popup-bg {
+  position: absolute;
+  width: 100%;
+  height: 130vh;
+  background: rgba(0, 0, 0, 0.7803921569);
+  z-index: 100;
+}
+#popup .popup-wrapper {
+  width: 896px;
+  height: 397px;
+  display: flex;
+  background: #fff;
+  position: absolute;
+  overflow: hidden;
+  gap: 25px;
+  border-radius: 20px;
+  align-items: center;
+  left: 20%;
+  top: 150px;
+  z-index: 200;
+}
+#popup .popup-wrapper .remove-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 3px 3px 0 3px;
+  border-radius: 4px;
+}
+#popup .popup-wrapper .remove-btn:active {
+  background-color: rgba(0, 0, 0, 0.0784313725);
+}
+#popup .popup-wrapper-images img:nth-child(1) {
+  width: 400px;
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+}
+#popup .popup-wrapper-right {
+  padding: 30px;
+}
+#popup .popup-wrapper-right h1 {
+  color: #140A32;
+}
+#popup .popup-wrapper-right-people {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+#popup .popup-wrapper-right-form form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+#popup .popup-wrapper-right-form form label {
+  width: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
+}
+#popup .popup-wrapper-right-form form label span {
+  font-size: 12px;
+  color: rgba(47, 43, 67, 0.527);
+}
+#popup .popup-wrapper-right-form form label input {
+  border: none;
+  outline: none;
+}
+#popup .popup-wrapper-right-form form button {
+  background-color: #140A32;
+  padding: 16px 24px 18px 24px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#popup .popup-wrapper-right-form span {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.popup-success-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-success-wrapper .popup-success {
+  text-align: center;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup-success-wrapper .popup-success p {
+  color: #140A32;
+}
+.popup-success-wrapper .popup-success h1 {
+  color: #140A32;
+}
+.popup-success-wrapper .popup-success button {
+  background-color: #33836E;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.popup-success-wrapper .popup-success button:hover {
+  background-color: #81d2bc;
+}
+
+.dnone {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  #popup .popup-wrapper {
+    width: 95%;
+    height: 527px;
+    gap: 25px;
+    left: 10px;
+    top: 70px;
+    flex-direction: column;
+  }
+  #popup .popup-wrapper-images img:nth-child(1) {
+    width: 280px;
+    z-index: 1;
+  }
+  #popup .popup-wrapper-images img:nth-child(2) {
+    width: 180px;
+    position: absolute;
+    left: 0px;
+    bottom: -150px;
+  }
+  #popup .popup-wrapper-right {
+    padding: 20px;
+    width: 100%;
+  }
+  #popup .popup-wrapper-right h1 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  #popup .popup-wrapper-right-people {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  #popup .popup-wrapper-right-people img {
+    width: 160px;
+  }
+  #popup .popup-wrapper-right-people span {
+    font-size: 12px;
+  }
+  #popup .popup-wrapper-right-form form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #popup .popup-wrapper-right-form form label {
+    width: 100%;
+  }
+  #popup .popup-wrapper .popup-success-wrapper {
+    padding: 20px 0;
+  }
+  #popup .popup-wrapper .popup-success-wrapper .popup-success h1 {
+    font-size: 25px;
   }
 }
 footer {
